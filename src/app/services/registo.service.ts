@@ -39,7 +39,8 @@ export class RegistoService {
 
   //Get regitos do cidadao by id
   getCidadaoRegistos(cidadao_id:string){
-    const coll = this.afs.collection('registos', ref => ref.where('cidadao_id', '==', cidadao_id));
+    const coll = this.afs.collection('registos', 
+              ref => ref.where('cidadao_id', '==', cidadao_id));
     return coll.valueChanges();
   }
   
